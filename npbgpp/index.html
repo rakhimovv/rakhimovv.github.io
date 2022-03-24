@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description"
+          content="NPBG++: Accelerating Neural Point-Based Graphics. Accepted in CVPR 2022."/>
+    <title>NPBG++: Accelerating Neural Point-Based Graphics</title>
+    <!-- Bootstrap -->
+    <link href="css/bootstrap-4.4.1.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet" type="text/css">
+    <style>
+        body {
+            background: #fdfcf9 no-repeat fixed top left;
+            font-family: 'Open Sans', sans-serif;
+        }
+    </style>
+
+</head>
+
+<!-- cover -->
+<section>
+    <div class="jumbotron text-center mt-0">
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                    <h2 style="font-size:30px;">NPBG++: Accelerating Neural Point-Based Graphics</h2>
+                    <h4 style="color:#6e6e6e;"> CVPR 2022</h4>
+                    <hr>
+                    <h6>Ruslan Rakhimov<sup>1*</sup>,
+                        Andrei-Timotei Ardelean<sup>1*</sup>,
+                        Victor Lempitsky<sup>1,2</sup>,
+                        Evgeny Burnaev<sup>1,3</sup></h6>
+                    <p><sup>1</sup>Skolkovo Institute of Science and Technology
+                        <sup>2</sup>Yandex
+                        <sup>3</sup>Artificial Intelligence Research Institute
+                        <br>
+                        <sup>*</sup> denotes equal contribution
+                    </p>
+
+                    <div class="row justify-content-center">
+                        <div class="column">
+                            <p class="mb-5"><a class="btn btn-large btn-light"
+                                               href="" role="button"
+                                               target="_blank">
+                                <i class="fa fa-file"></i> Paper (soon)</a></p>
+                        </div>
+                        <div class="column">
+                            <p class="mb-5"><a class="btn btn-large btn-light" id="code_soon"
+                                               href="https://github.com/rakhimov/npbgpp" role="button"
+                                               target="_blank" disabled=1>
+                                <i class="fa fa-github-alt"></i> Code (soon)</a></p>
+                        </div>
+                        <div class="column">
+                            <p class="mb-5"><a class="btn btn-large btn-light" href=""
+                                               role="button" target="_blank">
+                                <i class="fa fa-file"></i> Supplementary (soon)</a></p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- abstract -->
+<section>
+    <div class="container">
+        <div class="row">
+            <div class="col-12 text-center">
+                <h3>Abstract</h3>
+                <hr style="margin-top:0px">
+                <p class="text-justify">
+                    We present a new system (NPBG++) for the novel view synthesis (NVS) task that achieves high
+                    rendering realism with low scene fitting time. Our method efficiently leverages the multiview
+                    observations and the point cloud of a static scene to predict a neural descriptor for each point,
+                    improving upon the pipeline of Neural Point-Based Graphics in several important ways. By predicting
+                    the descriptors with a single pass through the source images, we lift the requirement of per-scene
+                    optimization while also making the neural descriptors view-dependent and more suitable for scenes
+                    with strong non-Lambertian effects. In our comparisons, the proposed system outperforms previous NVS
+                    approaches in terms of fitting and rendering runtimes while producing images of similar quality.
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+<br>
+
+<!-- Pipeline overview -->
+<section>
+    <div class="container">
+        <div class="row">
+            <div class="col-12 text-center">
+                <h3>Pipeline overview</h3>
+                <hr style="margin-top:0px">
+                <img class="img-fluid" src="images/overview.png" alt="Overview of NPBG++">
+                <hr style="margin-top:0px">
+                <p class="text-justify">
+                    We represent the scene as a point cloud with a view-dependent neural descriptor embedded in each
+                    point. During 3d modeling stage, we sequentially process each input view
+                    (input image alignment and feature extraction) and apply online aggregation to update the neural
+                    descriptors of each point (no fitting). During the novel view synthesis stage, we
+                    rasterize the point cloud, pass the rasterization result through the rendering network, and
+                    post-process it (output image alignment) to get the novel view.
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+<br>
+
+<section>
+    <div class="container">
+        <div class="row">
+            <div class="col-12 text-center">
+                <h3>Demos</h3>
+                <hr style="margin-top:0px">
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col text-center">
+                <video width="100%" playsinline="" controls autoplay loop="loop" preload="" muted="">
+                    <source src="videos/dtu_scan110.mp4" type="video/mp4">
+                </video>
+            </div>
+            <div class="col text-center">
+                <video width="100%" playsinline="" controls autoplay loop="loop" preload="" muted="">
+                    <source src="videos/dtu_scan114.mp4" type="video/mp4">
+                </video>
+            </div>
+            <div class="col text-center">
+                <video width="100%" playsinline="" controls autoplay loop="loop" preload="" muted="">
+                    <source src="videos/dtu_scan118.mp4" type="video/mp4">
+                </video>
+            </div>
+            <div class="col text-center">
+                <video width="100%" playsinline="" controls autoplay loop="loop" preload="" muted="">
+                    <source src="videos/h3ds_5ae021f2805c0854.mp4" type="video/mp4">
+                </video>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col text-center">
+                <video width="100%" playsinline="" controls autoplay loop="loop" preload="" muted="">
+                    <source src="videos/h3ds_7dd427509fe84baa.mp4" type="video/mp4">
+                </video>
+            </div>
+            <div class="col text-center">
+                <video width="100%" playsinline="" controls autoplay loop="loop" preload="" muted="">
+                    <source src="videos/nerf_ficus.mp4" type="video/mp4">
+                </video>
+            </div>
+            <div class="col text-center">
+                <video width="100%" playsinline="" controls autoplay loop="loop" preload="" muted="">
+                    <source src="videos/nerf_hotdog.mp4" type="video/mp4">
+                </video>
+            </div>
+            <div class="col text-center">
+                <!--                <h3>AR demo 2</h3>-->
+                <!--                <hr style="margin-top:0px">-->
+                <video width="100%" playsinline="" controls autoplay loop="loop" preload="" muted="">
+                    <source src="videos/nerf_mic.mp4" type="video/mp4">
+                </video>
+            </div>
+        </div>
+    </div>
+</section>
+<br>
+
+<section>
+    <div class="container">
+        <div class="row">
+            <div class="col-12 text-center">
+                <h3>Modeling view-dependent effects</h3>
+                <hr style="margin-top:0px">
+                <video width="100%" playsinline="" controls loop="loop" preload="" muted="">
+                    <source src="videos/view_dependent_effects.mp4" type="video/mp4">
+                </video>
+            </div>
+        </div>
+    </div>
+</section>
+<br>
+
+
+<!-- citing -->
+<!--<div class="container">-->
+<!--    <div class="row ">-->
+<!--        <div class="col-12">-->
+<!--            <h3>Citation</h3>-->
+<!--            <hr style="margin-top:0px">-->
+<!--            <pre style="background-color: #e9eeef;padding: 1.25em 1.5em">-->
+<!--<code>-->
+<!--    -->
+<!--</code></pre>-->
+<!--            <hr>-->
+<!--        </div>-->
+<!--    </div>-->
+<!--</div>-->
+
+<footer class="text-center" style="margin-bottom:10px; font-size: medium;">
+    <hr>
+    Thanks to <a href="https://lioryariv.github.io/" target="_blank">Lior Yariv</a> for the <a
+        href="https://lioryariv.github.io/idr/" target="_blank">website template</a>.
+</footer>
+
+<script type="text/javascript">
+    function changePlaybackSpeed(speed) {
+        document.getElementById('inspect_vid').playbackRate = speed;
+    }
+
+    // changePlaybackSpeed(0.25)
+
+    var demo = document.getElementById("header_vid");
+    var startTime;
+    var timeout = undefined;
+    demo.addEventListener("loadstart", function () {
+        startTime = Date.now();
+        timeout = setTimeout(function () {
+            var demoWarning = document.getElementById("demo-warning");
+            demoWarning.append("Loading the videos took too long.");
+            clearTimeout(timeout);
+            timeout = undefined;
+        }, 6000);
+    });
+    demo.addEventListener("loadeddata", function () {
+        if (timeout) {
+            clearTimeout(timeout);
+            timeout = undefined;
+        }
+    });
+</script>
+<script>
+    MathJax = {
+        tex: {inlineMath: [['$', '$'], ['\\(', '\\)']]}
+    };
+</script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+</body>
+</html>
