@@ -26,14 +26,13 @@
                             <name>Ruslan Rakhimov</name>
                         </p>
                         <p>I am a Ph.D. student at <a href="https://faculty.skoltech.ru/people/evgenyburnaev">Evgeny
-                            Burnaev</a>'s <a href="http://adase.group">ADASE Group</a>, at the
-                            <a href="https://www.skoltech.ru/en">Skolkovo Institute of Science and Technology</a>.
+                            Burnaev</a>'s <a href="https://raic.skoltech.ru/">research group</a>, at the
+                            <a href="https://www.skoltech.ru/en">Skolkovo Institute of Science and Technology</a> (Skoltech).
                         </p>
                         <p>
-                            I received a Master's Degree in Data Science from the <a href="https://www.skoltech.ru/en">Skolkovo
-                            Institute of Science and Technology</a> in 2020. Prior to that, I
+                            I received a Master's Degree in Data Science from the Skoltech in 2020. Prior to that, I
                             received my Bachelor's in Applied Mathematics and Physics from the <a
-                                href="https://mipt.ru/english">Moscow Institute of Physics and Technology</a> in 2018.
+                                href="https://mipt.ru/english">Moscow Institute of Physics and Technology</a> (MIPT) in 2018.
                         </p>
                         <p style="text-align:center">
                             <a href="mailto:risonyo@gmail.com">Email</a> &nbsp/&nbsp
@@ -111,6 +110,91 @@
                     </td>
                 </tr>
 
+                <tr onmouseout="def_stop()" onmouseover="def_start()">
+                    <td style="padding:20px;width:25%;vertical-align:middle">
+                        <div class="one">
+                            <div class="two" id='def_image'>
+                                <img src='images/def_after.png' width="160"></div>
+                            <img src='images/def_before.png' width="160">
+                        </div>
+                        <script type="text/javascript">
+                            function def_start() {
+                                document.getElementById('def_image').style.opacity = "1";
+                            }
+
+                            function def_stop() {
+                                document.getElementById('def_image').style.opacity = "0";
+                            }
+
+                            def_stop()
+                        </script>
+                    </td>
+                    <td style="padding:20px;width:75%;vertical-align:middle">
+                        <a href="https://arxiv.org/abs/2011.15081">
+                            <papertitle>DEF: Deep Estimation of Sharp Geometric Features in 3D Shapes</papertitle>
+                        </a>
+                        <br>
+                        Albert Matveev, <strong>Ruslan Rakhimov</strong>, Alexey Artemov, Gleb Bobrovskikh, <br>
+                        Vage Egiazarian, Emil Bogomolov, Daniele Panozzo, Denis Zorin, Evgeny Burnaev
+                        <br>
+                        <em>SIGGRAPH</em>, 2022
+                        <br>
+                        <a href="https://artonson.github.io/publications/2022-def">project page</a> /
+                        <a href="https://arxiv.org/abs/2011.15081">arXiv</a>
+                        <a href="https://github.com/artonson/def">code</a>
+                        <br>
+                        <p></p>
+                        <p>
+                            Differently from existing data-driven methods for predicting sharp geometric features in
+                            sampled 3D shapes, which reduce this problem to feature
+                            classification, we propose to regress a scalar field representing the distance from point
+                            samples to the closest feature line on local patches.
+                        </p>
+                    </td>
+                </tr>
+
+                <tr onmouseout="multineus_stop()" onmouseover="multineus_start()">
+                    <td style="padding:20px;width:25%;vertical-align:middle">
+                        <div class="one">
+                            <div class="two" id='multineus_image'>
+                                <video width=100% height=100% muted autoplay loop>
+                                    <source src="images/multineus.mp4" type="video/mp4">
+                                    Your browser does not support the video tag.
+                                </video>
+                            </div>
+                            <img src='images/multineus.png' width="160">
+                        </div>
+                        <script type="text/javascript">
+                            function multineus_start() {
+                                document.getElementById('multineus_image').style.opacity = "1";
+                            }
+
+                            function multineus_stop() {
+                                document.getElementById('multineus_image').style.opacity = "0";
+                            }
+
+                            multineus_stop()
+                        </script>
+                    </td>
+                    <td style="padding:20px;width:75%;vertical-align:middle">
+                        <a href="https://arxiv.org/abs/2209.04436">
+                            <papertitle>Multi-NeuS: 3D Head Portraits from Single Image with Neural Implicit Functions</papertitle>
+                        </a>
+                        <br>
+                        Egor Burkov, <strong>Ruslan Rakhimov</strong>, Aleksandr Safin, Evgeny Burnaev, Victor Lempitsky
+                        <br>
+                        <em>Preprint</em>
+                        <br>
+                        <a href="https://shrubb.github.io/research/multi-neus">project page</a> /
+                        <a href="https://arxiv.org/abs/2209.04436">arXiv</a>
+                        <br>
+                        <p></p>
+                        <p>
+                            We present an approach for the reconstruction of textured 3D meshes of human heads from one or few views.
+                        </p>
+                    </td>
+                </tr>
+
                 <tr onmouseout="sk3d_stop()" onmouseover="sk3d_start()">
                     <td style="padding:20px;width:25%;vertical-align:middle">
                         <div class="one">
@@ -141,6 +225,8 @@
                         <br>
                         Alexey Artemov, Evgeny Burnaev, Dzmitry Tsetserukou, Denis Zorin
                         <br>
+                        <em>Preprint</em>
+                        <br>
                         <a href="https://arxiv.org/abs/2203.06111">arXiv</a>
                         <br>
                         <p></p>
@@ -148,45 +234,6 @@
                             A new multi-sensor dataset for 3D surface reconstruction that includes registered RGB and
                             depth data from sensors of different resolutions and modalities under a large number of
                             lighting conditions.
-                        </p>
-                    </td>
-                </tr>
-
-                <tr onmouseout="def_stop()" onmouseover="def_start()">
-                    <td style="padding:20px;width:25%;vertical-align:middle">
-                        <div class="one">
-                            <div class="two" id='def_image'>
-                                <img src='images/def_after.png' width="160"></div>
-                            <img src='images/def_before.png' width="160">
-                        </div>
-                        <script type="text/javascript">
-                            function def_start() {
-                                document.getElementById('def_image').style.opacity = "1";
-                            }
-
-                            function def_stop() {
-                                document.getElementById('def_image').style.opacity = "0";
-                            }
-
-                            def_stop()
-                        </script>
-                    </td>
-                    <td style="padding:20px;width:75%;vertical-align:middle">
-                        <a href="https://arxiv.org/abs/2011.15081">
-                            <papertitle>DEF: Deep Estimation of Sharp Geometric Features in 3D Shapes</papertitle>
-                        </a>
-                        <br>
-                        Albert Matveev, <strong>Ruslan Rakhimov</strong>, Alexey Artemov, Gleb Bobrovskikh, <br>
-                        Vage Egiazarian, Emil Bogomolov, Daniele Panozzo, Denis Zorin, Evgeny Burnaev
-                        <br>
-                        <a href="https://arxiv.org/abs/2011.15081">arXiv</a>
-                        <br>
-                        <p></p>
-                        <p>
-                            Differently from existing data-driven methods for predicting sharp geometric features in
-                            sampled 3D shapes, which reduce this problem to feature
-                            classification, we propose to regress a scalar field representing the distance from point
-                            samples to the closest feature line on local patches.
                         </p>
                     </td>
                 </tr>
@@ -215,7 +262,7 @@
                             <papertitle>Making DensePose fast and light</papertitle>
                         </a>
                         <br>
-                        <strong>Ruslan Rakhimov</strong>, Emil Bogomolov, Alexandr Notchenko, Fung Mao, Alexey Artemov,
+                        <strong>Ruslan Rakhimov</strong>, Emil Bogomolov, Alexandr Notchenko, Fung Mao, Alexey Artemov, <br>
                         Denis Zorin, Evgeny Burnaev
                         <br>
                         <em>WACV</em>, 2021
