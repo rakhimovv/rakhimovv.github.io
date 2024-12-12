@@ -109,6 +109,49 @@
                         style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
                         <tbody> 
                                 
+                            <tr onmouseout="t3dgs_stop()" onmouseover="t3dgs_start()">
+                                <td style="padding:20px;width:25%;vertical-align:middle">
+                                    <div class="one">
+                                        <div class="two" id='t3dgs_image'>
+                                            <img src='images/t3dgs.png' width="160">
+                                        </div>
+                                        <img src='images/t3dgs.png' width="160">
+                                    </div>
+                                    <script type="text/javascript">
+                                        function t3dgs_start() {
+                                            document.getElementById('t3dgs_image').style.opacity = "1";
+                                        }
+
+                                        function t3dgs_stop() {
+                                            document.getElementById('t3dgs_image').style.opacity = "0";
+                                        }
+
+                                        t3dgs_stop()
+                                    </script>
+                                </td>
+                                <td style="padding:20px;width:75%;vertical-align:middle">
+                                    <a href="https://t3dgs.github.io/">
+                                        <papertitle>T-3DGS: Removing Transient Objects for 3D Scene Reconstruction
+                                        </papertitle>
+                                    </a>
+                                    <br>
+                                    Vadim Pryadilshchikov,
+                                    Alexander Markin,
+                                    Artem Komarichev,
+                                    Ruslan Rakhimov,
+                                    Peter Wonka,
+                                    Evgeny Burnaev
+                                    <br>
+                                    <em>Preprint</em>, 2024
+                                    <br>
+                                    <a href="https://transient-3dgs.github.io/">project page</a> /
+                                    <a href="https://arxiv.org/abs/2412.00155">arXiv</a> /
+                                    <a href="https://github.com/Vadim200116/T-3DGS">code</a>
+                                    <p></p>
+                                    <p>We propose a novel framework that leverages 3D Gaussian Splatting to effectively remove transient objects from input videos, enabling accurate and stable 3D scene reconstruction.</p>
+                                </td>
+                            </tr>
+
                             <tr onmouseout="gsplatloc_stop()" onmouseover="gsplatloc_start()">
                                 <td style="padding:20px;width:25%;vertical-align:middle">
                                     <div class="one">
